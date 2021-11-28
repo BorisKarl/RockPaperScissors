@@ -1,6 +1,7 @@
 
-
-function rockPaperScissors(playerSelection){
+let wins = 0;
+let loss = 0;
+function game(){
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
@@ -8,9 +9,9 @@ function rockPaperScissors(playerSelection){
       }
     
     function computerPlay(){
-        let r = "rock";
-        let p = "paper";
-        let s = "scissors";
+        let r = "stein";
+        let p = "papier";
+        let s = "schere";
         let answer = [r, p, s];
         let i = getRandomInt(0,3);
         return answer[i];
@@ -18,46 +19,46 @@ function rockPaperScissors(playerSelection){
     
     let b = computerPlay();
     
-
-
-    let a = playerSelection.toLowerCase();
-    let wins = 0;
-    let loss = 0;
+    let playerSelection = prompt("Stein, Schere oder Papier?").toLowerCase();
+    alert("Computer: " + b);
+    let a = playerSelection;
     if(a == b) {
-        console.log("That´s a tie!")
-    }else if(a == "rock" && b == "scissors") {
-        console.log("You win! Rock beats scissors!");
-        wins = wins++;
-    }else if(a == "paper" && b == "rock") {
-        console.log("You win! Paper beats rock!");
-        wins = wins++;
-    }else if(a == "scissors" && b == "paper") {
-        console.log("You win! Scissors beat paper!");
-        wins = wins++;
-    }else if(a == "rock" && b == "paper") {
-        console.log("You lose! Paper beats rock!");
-        loss = loss++;
-    }else if(a =="paper" && b == "scissor") {
-        console.log("You lose! Scissors beat paper!");
-        ++loss;
-    }else if(a =="scissors" && b =="rock") {
-        console.log("You lose! Rock beats scissors!")
-        ++loss;
+        alert("Unentschieden!")
+    }else if(a == "stein" && b == "schere") {
+        alert("Gewonnen! Stein schlägt Schere!");
+        wins += 1;
+    }else if(a == "papier" && b == "stein") {
+        alert("Gewonnen! Papier schlägt Stein!");
+        wins+= 1;
+    }else if(a == "schere" && b == "papier") {
+        alert("Gewonnen! Schere schlägt Papier!");
+        wins+= 1;
+    }else if(a == "stein" && b == "papier") {
+        alert("Gewonnen! Papier schlägt stein!");
+        loss+= 1;
+    }else if(a =="papier" && b == "schere") {
+        alert("Gewonnen! Schere schlägt Papier!");
+        loss+= 1;
+    }else if(a =="schere" && b =="stein") {
+        alert("Gewonnen! Stein schlägt Schere!")
+        loss+= 1;
     }else{
-        console.log("Please enter Rock, Paper or Scissors");
+        prompt("Bitte gib Papier, Stein oder Schere ein!");
        
     }
+   alert("Spielstand: Spieler " + wins + " Computer " + loss);
+   //alert("Spielerwahl: " + a);
    
-    
     }
-    
-    /*if(console.count() == 5){
-        if(wins > loss){
-            console.log("You win the game with wins[i] to loss[i]!")
-        }else if(wins<loss) {
-            console.log("You lose!")
-        }
-    }*/
 
-    
-    
+    for(i = 0; i < 5; i++){
+    game();
+    };
+    if (wins > loss) {
+        alert("Du hast mit " + wins + " Siegen gewonnen!", "Stein, Schere, Papier");
+
+    }else if(loss > wins){
+        alert("Du hast mit " + wins + " zu " + loss + " verloren.");
+    }else{
+        alert("Unentschieden!");
+    };
