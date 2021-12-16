@@ -44,10 +44,10 @@ function game(playerSelection){
                     disableButtons();
                 }
     }else if (a == b){
-        result = (`Unentschieden!<br><br>Spieler: ${playerScore}<br>Computer: ${computerScore}`);       
+        result = (`Unentschieden! Beide Spieler wählten ${a}.<br><br>Spieler: ${playerScore}<br>Computer: ${computerScore}`);       
   }else{
         computerScore += 1;
-        result = (`Verloren! ${a} schlägt ${b} ! <br><br>Spieler: ${playerScore} <br>Computer: ${computerScore}` )
+        result = (`Verloren! ${b} schlägt ${a} ! <br><br>Spieler: ${playerScore} <br>Computer: ${computerScore}` )
         if (computerScore == 5) {
             result += '<br><br>Der Computer hat gewonnen! Lade die Seite neu, um nochmal zu spielen'
             disableButtons();
