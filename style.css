@@ -11,35 +11,49 @@ h1 {
     text-align: center;
 }
 
-.container {
-    margin-top: 300px;;
-    margin-bottom: 50px;
+.btns {
+    
+    margin-top: 20%;
     display: flex;
+    flex-direction: row;
+    min-width: 100vh;
     justify-content: center;
-    align-items: center;
+    gap: 10%;
+
     
 }
 
-li, a, input {
-    
+input { 
     list-style-type: none;
     text-decoration: none;
     color: rgb(243, 167, 179);
     font-size: 30px;
     text-decoration: rosybrown;
-    
+    justify-content: space-evenly;
 }
 
-.btns {
-   gap: 100px;
-   border-color: blueviolet;
-   border-radius: 2em;
 
-}
+
 
 #result {
+    padding-top: 30px;
     text-align: center;
     font-style: normal;
     font-family: monospace;
     font-size: 25px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    
+    position: absolute;
+    bottom: .2cm;
+    color: rgb(7, 76, 136);
+    font-size: 30px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
