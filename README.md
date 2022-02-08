@@ -1,6 +1,7 @@
-This is a game of rock paper scissors I made for The Odin Project.
-I updated it with a UI and a game counter, I liked the old school prompt style though.
+This is a game of rock paper scissors I made for The Odin Project and reworked completely after finishing the calculator project.     
+Lots of DOM manipulation going on here.
+Caution, it is in german, Schere Stein Papier as we call it.
 
-#Live preview here: https://boriskarl.github.io/RockPaperScissors/
+Live preview here: https://boriskarl.github.io/RockPaperScissors/
 
 
