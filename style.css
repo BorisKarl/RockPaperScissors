@@ -3,57 +3,52 @@ body {
     padding: 0;
 }
 
-h1 {
-    font-size: 150px;
-    font-style: italic;
-    color: pink;
-    text-decoration: rosybrown;
-    text-align: center;
-}
-
-.btns {
-    
-    margin-top: 20%;
-    display: flex;
-    flex-direction: row;
-    min-width: 100vh;
-    justify-content: center;
-    gap: 10%;
-
-    
-}
-
-input { 
+ul, li, a {
     list-style-type: none;
     text-decoration: none;
     color: rgb(243, 167, 179);
-    font-size: 30px;
-    text-decoration: rosybrown;
-    justify-content: space-evenly;
+    font-size: 160 px;
+    margin-top: 5vh;
 }
 
-
-
-
-#result {
-    padding-top: 30px;
-    text-align: center;
-    font-style: normal;
-    font-family: monospace;
-    font-size: 25px;
-}
-
-.footer-container {
+.container {
+    height: 50vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
-footer {
+.flexcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
-    position: absolute;
-    bottom: .2cm;
-    color: rgb(7, 76, 136);
-    font-size: 30px;
-    font-style: italic;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+a, button {
+  background-color: royalblue;
+  border: none;
+  color: wheat;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+button:hover {
+    background-color: rgb(169, 183, 224);
+}
+
+#gameCount {
+        margin-top: 10px;
+}
+
+a, #current, #points, #result {
+    font-family: monospace;
+    font-size: 2rem;
 }
